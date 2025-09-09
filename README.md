@@ -200,7 +200,7 @@ tests/ → Unit & integration tests.
 
 docs/ → Diagrams, report, documentation.
 
-👨‍💻 Authors
+👨‍💻 Author
 Sourav Paul – GitHub
 Guided by Dr. Nabanita Choudhury (Assam down town University).
 
