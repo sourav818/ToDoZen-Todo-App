@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDoZen - Connecting the Goals</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='ToDoZen.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>
+                <span class="brand">ToDoZen</span> - Connecting the Goals
+            </h1>
+        </header>
+
+        <main>
+            <section class="task-input">
+                <h2>Add New Task</h2>
+                <form id="task-form">
+                    <input type="text" id="task-title" name="task-title" placeholder="Enter your task..." required>
+                    <input type="date" id="task-deadline" name="task-deadline" required>
+                    <select id="task-priority" name="task-priority" required>
+                        <option value="" disabled selected>Set Priority</option>
+                        <option value="High">High</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Low">Low</option>
+                    </select>
+                    <button type="submit">Add Task</button>
+                </form>
+            </section>
+
+            <section class="tasks">
+                <h2>Your Tasks</h2>
+                <ul id="task-list">
+                    <!-- Tasks will go here dynamically -->
+                </ul>
+            </section>
+
+            <!-- Navigation -->
+            <div class="bottom-buttons">
+                <button onclick="window.location.href='taskpage.html';">Task Page</button>
+                <button onclick="window.location.href='profile.html';">Profile</button>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2024 ToDoZen - Connecting the Goals | Designed by Team 9</p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='ToDoZen.js') }}"></script>
+</body>
+</html>

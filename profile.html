@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - ToDoZen</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/profile.css') }}">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1>Profile Overview</h1>
+        </header>
+
+        <main>
+            <div class="layout-container">
+                <!-- Left Container -->
+                <section class="left-container">
+                    <div class="progress-and-reward">
+                        <h2>Your Progress</h2>
+                        <p>Completed Tasks: <span id="completed-tasks">{{ completed_tasks }}</span></p>
+                        <p>Total Rewards: <span id="reward-points">{{ reward_points }}</span> points</p>
+        
+                        <!-- Circular Progress Bar -->
+                        <div class="progress-wrapper">
+                            <svg id="reward-bar" width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="50" cy="50" r="45" stroke="#e0e0e0" stroke-width="10" fill="none" />
+                                <circle id="progress-bar" cx="50" cy="50" r="45" stroke="#4CAF50" stroke-width="10" fill="none" 
+                                    stroke-dasharray="283" stroke-dashoffset="283" />
+                            </svg>
+                            <span id="reward-percentage">{{ reward_percentage }}%</span>
+                        </div>
+        
+                        <button id="claim-reward-btn">Claim Reward</button>
+        
+                        <!-- Image Slider -->
+                        <!-- Slideshow container -->
+                        <div class="slideshow-container">
+                            <div class="mySlides fade">
+                                <div class="numbertext">1 / 3</div>
+                                <a href="https://www.proofhub.com/articles/what-is-task-management" target="_blank">
+                                    <img src="{{ url_for('static', filename='images/t.png') }}" style="width:100%">
+                                </a>
+                                <div class="text">What is task management?</div>
+                            </div>
+                            <div class="mySlides fade">
+                                <div class="numbertext">2 / 3</div>
+                                <a href="https://www.profit.co/blog/task-management/deadline-management-8-steps-to-manage-deadlines/" target="_blank">
+                                    <img src="{{ url_for('static', filename='images/deadlinemanagement.png') }}" style="width:100%">
+                                </a>
+                                <div class="text">8 Steps to Manage Deadlines</div>
+                            </div>
+                            <div class="mySlides fade">
+                                <div class="numbertext">3 / 3</div>
+                                <a href="https://everhour.com/blog/task-management-skills/" target="_blank">
+                                    <img src="{{ url_for('static', filename='images/Mastering Task Management Skills.jpg') }}" style="width:100%">
+                                </a>
+                                <div class="text">Mastering Task Management Skills</div>
+                            </div>
+                            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                        </div>
+                        <br>
+                        <div style="text-align:center">
+                            <span class="dot" onclick="currentSlide(1)"></span>
+                            <span class="dot" onclick="currentSlide(2)"></span>
+                            <span class="dot" onclick="currentSlide(3)"></span>
+                        </div>
+        
+                        <button class="back-home" id="back-home-btn">Back to Home</button>
+                    </div>
+                </section>
+        
+                <!-- Right Container -->
+                <section class="right-container">
+                    <h2>Visualizations</h2>
+                    <div class="graph">
+                        <h3>Task Completion</h3>
+                        <img src="{{ url_for('static', filename='images/task-completion-chart.webp') }}" alt="Task Completion Chart" class="visualization-img">
+                    </div>
+                    <div class="graph">
+                        <h3>Reward Points Progression</h3>
+                        <img src="{{ url_for('static', filename='images/reward-points-chart.webp') }}" alt="Reward Points Progression Chart" class="visualization-img">
+                    </div>
+                </section>
+            </div>
+        </main>
+        
+        <footer class="footer">
+            <p>&copy; 2024 ToDoZen - Connecting the Goals | Designed by Team 9</p>
+        </footer>
+    </div>
+
+    <!-- Include the JavaScript -->
+    <script src="{{ url_for('static', filename='js/profile.js') }}"></script>
+</body>
+</html>

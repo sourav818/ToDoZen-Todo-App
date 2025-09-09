@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/taskpage.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@3.10.0/dist/fullcalendar.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.29.1/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@3.10.0/dist/fullcalendar.min.js"></script>
+</head>
+<body>
+    <div class="page-container">
+        <div class="left-container">
+            <header class="header">
+                <h1>Your Tasks</h1>
+            </header>
+            <div class="task-list-container">
+                <ul id="task-list"></ul>
+            </div>
+        </div>
+        <div class="right-container">
+            <header class="header">
+                <h1>Calendar</h1>
+            </header>
+            <div id="calendar"></div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 ToDoZen - Connecting the Goals | Designed by Team 9</p>
+    </footer>
+    <script src="{{ url_for('static', filename='js/taskpage.js') }}"></script>
+</body>
+</html>
