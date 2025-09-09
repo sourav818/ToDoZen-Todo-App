@@ -1,0 +1,177 @@
+/* Default Theme Variables */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --brand-color: #4CAF50; /* Green color for ToDoZen */
+    --card-bg-color: #f9f9f9; /* Default task card background */
+    --border-color: #ddd; /* Default border color */
+    --button-hover-color: #45a049; /* Button hover color */
+    --container-bg-color: rgba(255, 255, 255, 0.3); /* Transparency for container */
+}
+
+/* Apply Theme Variables */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s, color 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: var(--bg-color) url('/static/images/task-management-bg.jpg') no-repeat center center/cover; /* Correct path */
+    color: var(--text-color);
+    scroll-behavior: smooth; /* Smooth scrolling for better navigation */
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: var(--container-bg-color); /* Transparent background */
+    color: var(--text-color);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Header and Brand Styling */
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    font-size: 2rem;
+    margin: 0;
+    text-transform: uppercase; /* Text in uppercase for better emphasis */
+    letter-spacing: 1px; /* Add spacing between letters for readability */
+}
+
+.brand {
+    color: var(--brand-color);
+    font-weight: bold; /* Brand name in bold for emphasis */
+}
+
+/* Task Input Section */
+.task-input {
+    margin-bottom: 20px;
+}
+
+.task-input h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    text-transform: capitalize; /* Capitalize the first letter for a cleaner look */
+}
+
+#task-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+#task-title, #task-deadline, #task-priority {
+    flex: 1;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: border-color 0.3s; /* Smooth transition for focus states */
+}
+
+#task-title:focus, 
+#task-deadline:focus, 
+#task-priority:focus {
+    outline: none;
+    border-color: var(--brand-color); /* Highlight border on focus for better accessibility */
+}
+
+/* Select Element */
+#task-form select {
+    appearance: none;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    cursor: pointer;
+    transition: background-color 0.3s; /* Smooth background transition */
+}
+
+#task-form select:hover {
+    background-color: rgba(200, 200, 200, 0.5); /* Subtle hover effect for dropdowns */
+}
+
+/* Buttons */
+button {
+    padding: 10px 20px;
+    background-color: var(--brand-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s; /* Add a scale effect on hover */
+}
+
+button:hover {
+    background-color: var(--button-hover-color);
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+button:focus {
+    outline: 2px solid var(--button-hover-color); /* Add focus outline for accessibility */
+    outline-offset: 2px;
+}
+
+/* Task List */
+.task-list h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+#task-list {
+    list-style: none;
+    padding: 0;
+}
+
+#task-list li {
+    background: var(--card-bg-color);
+    padding: 15px;
+    margin-bottom: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.2s; /* Task card hover effect */
+}
+
+#task-list li:hover {
+    transform: translateY(-2px); /* Slight lift on hover */
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: var(--text-color);
+}
+
+.footer a {
+    color: var(--brand-color); /* Footer links in brand color */
+    text-decoration: none;
+    transition: color 0.3s; /* Smooth transition for hover effects */
+}
+
+.footer a:hover {
+    color: var(--button-hover-color); /* Change link color on hover */
+}
