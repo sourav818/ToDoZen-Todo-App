@@ -1,0 +1,86 @@
+/* Basic Layout for Left and Right Containers */
+.page-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    height: 100vh;
+}
+
+/* Left Container Styles */
+.left-container {
+    flex: 1;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.task-list-container {
+    margin-top: 20px;
+}
+
+#task-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#task-list li {
+    background-color: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.complete-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Right Container Styles */
+.right-container {
+    flex: 1.5;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#calendar {
+    margin-top: 20px;
+    height: 500px;
+}
+#calendar {
+    width: 100%;
+    height: 600px;
+}
+
+/* Priority-based Color */
+.high-priority {
+    color: red;
+}
+
+.medium-priority {
+    color: yellow;
+}
+
+.low-priority {
+    color: green;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+}
